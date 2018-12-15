@@ -15,12 +15,13 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     JumbotronComponent,
     EventcardComponent,
-    FooterComponent
+    FooterComponent,
+      ...AppRoutingModule.routableComponents
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-      CollapseModule.forRoot()
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
