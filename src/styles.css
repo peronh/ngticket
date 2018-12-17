@@ -50,6 +50,10 @@ footer {
     width:200px;
 }
 
+.row-login-form {
+    margin-top: 50px;
+}
+
 
 @media (min-width:768px){
     html{
