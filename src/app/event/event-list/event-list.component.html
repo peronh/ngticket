@@ -16,10 +16,10 @@
     </div>
   </div>
 
-  <div class="card-deck pt-5">
+  <div class="card-deck pt-5" *ngFor="let evg of eventsGuppedBy3">
 
     <app-eventcard class="col col-md-6 col-lg-4"
-                   *ngFor="let ev of events"
+                   *ngFor="let ev of evg"
                     [esemeny]="ev"
     ></app-eventcard>
    <!-- <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>

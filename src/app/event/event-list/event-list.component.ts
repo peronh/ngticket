@@ -8,12 +8,18 @@ import {EventModel} from '../../shared/event-model';
   styleUrls: ['./event-list.component.css']
 })
 export class EventListComponent implements OnInit {
-  public events: EventModel[];
+  public eventsGuppedBy3: EventModel[];
 
   constructor(private _eventService: EventService) {
-    this.events = this._eventService.getAllEvents();
-    console.log(this.events);
   }
   ngOnInit() {
+    this.eventsGuppedBy3 = this._eventService.getAllEvents()
+    .reduce((acc, curr: EventModel, ind: number) => {
+      if (ind % 3 === 0) {
+        acc.push([]);
+      }
+      acc[acc.length - 1].push(curr);
+      return acc;
+      }, []);
   }
 }
