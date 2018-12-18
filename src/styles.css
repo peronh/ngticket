@@ -68,7 +68,12 @@ footer {
 .jumbotron {
     border-radius: 0;
 }
-
+input.btn.btn-secondary.btn-sm {
+    margin: 0 10px;
+}
+.table-responsive {
+    display: table;
+}
 @media (min-width:768px){
     html{
         font-size:16px;
