@@ -6,9 +6,7 @@ import {UserModel} from './user-model';
 export class UserService {
   isLoggedin = false;
 
-  constructor(private _router: Router) {
-
-  }
+  constructor(private _router: Router) {  }
   private _user: UserModel;
 
   login(email: string, password: string) {
