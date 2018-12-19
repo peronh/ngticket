@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CollapseModule} from 'ngx-bootstrap';
+import { AlertModule, CollapseModule} from 'ngx-bootstrap';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { JumbotronComponent } from './core/jumbotron/jumbotron.component';
 import { EventcardComponent } from './event/eventcard/eventcard.component';
@@ -23,6 +23,7 @@ import {UserService} from './shared/user.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AlertModule.forRoot(),
     CollapseModule.forRoot()
   ],
   providers: [EventService, UserService],
