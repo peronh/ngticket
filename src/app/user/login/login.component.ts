@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../shared/user.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public error: string;
+
+  constructor(private  _userService: UserService) { }
 
   ngOnInit() {
   }
 
+  login(email: string, password: string) {
+    if (!this._userService.login(email, password)) {
+      this.error = ' hiba a bejelentkezés során';
+    }
+  }
+  clearError() {
+    delete(this.error);
+  }
 }
