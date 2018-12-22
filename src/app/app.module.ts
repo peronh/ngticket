@@ -10,6 +10,7 @@ import { EventcardComponent } from './event/eventcard/eventcard.component';
 import { FooterComponent } from './core/footer/footer.component';
 import {EventService} from './shared/event.service';
 import {UserService} from './shared/user.service';
+import {TicketService} from './shared/ticket.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {UserService} from './shared/user.service';
     JumbotronComponent,
     EventcardComponent,
     FooterComponent,
-      ...AppRoutingModule.routableComponents
+      ...AppRoutingModule.routableComponents,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +27,7 @@ import {UserService} from './shared/user.service';
     AlertModule.forRoot(),
     CollapseModule.forRoot()
   ],
-  providers: [EventService, UserService],
+  providers: [EventService, UserService, TicketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

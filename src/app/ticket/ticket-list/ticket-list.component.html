@@ -38,14 +38,14 @@
     </thead>
 
     <tbody>
-    <tr>
-      <th scope="row" data-toggle="tooltip" data-placement="bottom" title="Még 3 napig lehet licitálni, az esemény megtekintéséhez kattints ide"><a href="#">Sziget fesztivál</a></th>
-      <td>2018.08.03. 13:00</td>
-      <td>Példa Jóska</td>
-      <td>3db</td>
-      <td><a routerLink="../4/bid" >Tovább a licithez</a></td>
+    <tr *ngFor="let tic of ticketgroup">
+      <th scope="row" data-toggle="tooltip" data-placement="bottom" title="Még 3 napig lehet licitálni, az esemény megtekintéséhez kattints ide"><a [routerLink]="['../../event/', tic.eventId]">{{tic.event}}</a></th>
+      <td>{{tic.time}}</td>
+      <td>{{tic.seller}}</td>
+      <td>{{tic.pcs}}</td>
+      <td><a [routerLink]="['../', tic.id, 'bid']" >{{tic.link}}</a></td>
     </tr>
-
+<!--
     <tr>
       <th scope="row" data-toggle="tooltip" data-placement="bottom" title="Még 3 napig lehet licitálni, az esemény megtekintéséhez kattints ide"><a href="#">Sziget fesztivál</a></th>
       <td>2018.08.03. 13:00</td>
@@ -109,7 +109,7 @@
       <td >3db</td>
       <td><a routerLink="../4/bid">Tovább a licithez</a></td>
     </tr>
-
+-->
     </tbody>
   </table>
 

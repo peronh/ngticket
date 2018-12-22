@@ -8,7 +8,6 @@ export class UserModel {
 
     constructor(param?: UserModel) {
         if (param) {
-            // noinspection TypeScriptValidateTypes
             Object.assign(this, param);
         }
     }
